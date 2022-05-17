@@ -1,0 +1,14 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri": "mysql://root:@localhost/rkcomputer",
+        "prod_uri": "mysql://root:@localhost/rkcomputer",
+        "gamil-user": "nidhivanhealing@gmail.com",
+        "gmail-password": "nidhivan@123",
+        "no_of_posts": 2,
+        "admin_user": "admin",
+        "admin_password": "1234",
+        "img_folder": "C:\\xampp\\htdocs\\py\\flask\\static\\assets\\img"
+    }
+}

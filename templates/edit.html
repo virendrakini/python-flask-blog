@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('{{url_for('static', filename='assets/img/home-bg.jpg')}}')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <h1>ADD / EDIT POST</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <div class="container position-relative px-4 px-lg-5">
+        <a href="/dashboard"><button  class="btn btn-primary p-3 m-2">Dashboard </button></a>
+        <a href="/logout"><button  class="btn btn-primary p-3 m-2">Logout </button></a>
+            <hr>
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-9">
+                
+                <form action="/edit/{{srno}}" method="post">
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">post title</label>
+                      <input type="text" value="{{post.post_title}}" name="post_title" class="form-control" id="exampleFormControlInput1" placeholder="title">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlInput2">post description</label>
+                        <input type="text" value="{{post.post_description}}" name="post_description" class="form-control" id="exampleFormControlInput2" placeholder="description">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlInput5">post slug</label>
+                        <input type="text" value="{{post.post_slug}}" name="post_slug" class="form-control" id="exampleFormControlInput5" placeholder="Slug">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlInput6">post author</label>
+                        <input type="text" value="{{post.post_author}}" name="post_author" class="form-control" id="exampleFormControlInput6" placeholder="Author">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlInput3">post img</label>
+                        <input type="text" value="{{post.post_img}}" name="post_img" class="form-control" id="exampleFormControlInput3" placeholder="img">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlInput4">post status</label>
+                        <input type="text" value="{{post.post_status}}" name="post_status" class="form-control" id="exampleFormControlInput4" placeholder="status">
+                      </div>
+
+                      <button type="submit" class="btn btn-primary p-3 m-2">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
